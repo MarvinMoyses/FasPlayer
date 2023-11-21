@@ -1,1 +1,1 @@
-# FasPlayer
+# FastPlayer
