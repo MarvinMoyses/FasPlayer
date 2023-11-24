@@ -7,14 +7,84 @@
     <title>Busqueda</title>
     <Style>
         body {
-
+            margin: 0;
             background: #213555;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #213555;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 95%;
+            background-color: #F5EFE7;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .button {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        .selected {
+            background-color: #555;
+        }
+        .list {
+            background-color: #F5EFE7;
+            border-top-left-radius: 33px;
+            border-top-right-radius: 33px;
+            height: 700px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .image {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .text-container {
+            flex: 1;
+        }
+        h2 {
+            margin: 0;
+        }
+        h3 {
+            margin-top: 10px;
+            color: #545454;
+        }
+        .hr-container {
+            padding-top: 4px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .hr-line {
+            border: none;
+            height: 5px;
+            background-color: black;
+            width: 40%;
         }
     </Style>
 </head>
-
-<body>
-<div style="align-content: space-between;display: flex; align-items: center;">
+<header>
     <div>
         <img src="imgs/figma/iconoApp.png" alt="" style="width: 80px; padding-left: 0px;">
     </div>
@@ -22,17 +92,72 @@
         <h2>Play List</h2>
     </div>
     <div>
-        <img src="imgs/figma/color32.png" alt="" style="width: 40px;padding-left: 70px;">
+        <img src="imgs/figma/color32.png" alt="" style="width: 40px;padding-left: 50px;">
     </div>
     <div>
-        <img src="imgs/figma/home32.png" alt="" style="width: 40px;padding-left: 40px;">
+        <img src="imgs/figma/home32.png" alt="" style="width: 40px;;">
     </div>
-</div>
-<div >
-    <div style="background-color: aliceblue;">
-hola
+</header>
+
+<body>
+    <div class="list">
+
+        <div class="hr-container">
+            <hr class="hr-line">
+        </div>
+        
+        <div class="container">
+            <div class="image">
+                <img src="imgs/figma/caratula II.png" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+            </div>
+            <div class="text-container">
+                <h2>Para Dormir</h2>
+                <h3>Playlist - Usuario</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="imgs/figma/flor.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+            </div>
+            <div class="text-container">
+                <h2>Tus Me Gusta</h2>
+                <h3>Playlist - Usuario</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="imgs/figma/caratula IIII.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+            </div>
+            <div class="text-container">
+                <h2>Rap Good</h2>
+                <h3>Playlist - Usuario</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="imgs/figma/caratula V.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+            </div>
+            <div class="text-container">
+                <h2>Romanticonas</h2>
+                <h3>Playlist - Usuario</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="imgs/figma/caratula VI.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+            </div>
+            <div class="text-container">
+                <h2>Pa Chambear</h2>
+                <h3>Playlist - Usuario</h3>
+            </div>
+        </div>
     </div>
-</div>
 </body>
+<footer>
+    <a href="#" class="button"><img src="imgs/figma/music32.png" alt=""></a>
+    <a href="#" class="button"><img src="imgs/figma/antesA.png" alt=""></a>
+    <a href="#" class="button"><img src="imgs/figma/antesA.png" alt=""></a>
+    <a href="#" class="button"><img src="imgs/figma/antesA.png" alt=""></a>
+</footer>
 
 </html>
