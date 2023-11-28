@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #213555;
+}
+
+/* *----- HEADER -------*/
+header {
+  background-color: #213555;
+  color: #ffffff;
+  display: flex;
+  padding: 13px;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 10px;
+  font-weight: bold;
+  position: fixed;
+}
+
+header::before {
+  border-radius: 30px;
+}
+
+header #LogoTitulo {
+  display: flex;
+  align-items: center;
+}
+
+header #logo {
+  width: 45px;
+  margin-right: 13px;
+}
+
+header #xtraBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header #darkM {
+  margin-right: 20px;
+  width: 38px;
+}
+
+header #favB {
+  width: 38px;
+}
+
+/* *------ LISTA ----- */
+#lista {
+  background-color: #f5efe7;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  border-radius: 30px 30px 0 0;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+#lista .cancion {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+#lista .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid #213555;
+  margin-right: 10px;
+}
+
+#lista .titulo {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+#lista .duracion {
+  font-size: 18px;
+}
+
+#lista .playB {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* *----- MENÚ ------- */
+#menu {
+  background-color: #f5efe7;
+  border-radius: 30px 30px 0 0;
+  border-top: 1px solid #213555;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+#menu .parte {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu .parte:first-child {
+  background-color: rgba(33, 53, 85, 0.3);
+  border-top-left-radius: 30px;
+}
+
+/* *------- LINEA ------- */
+#linea {
+  height: 6px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #213555;
+}
+
+/* *---- REPRODUCTOR ---- */
+#reproductor {
+  padding-top: 73px;
+  align-items: center;
+}
+
+/* ? IMAGEN */
+#reproductor .img {
+  width: 17rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* ? NOMBRE */
+#reproductor #nombre {
+  display: flex;
+  align-items: center;
+  margin: 15px 15px;
+  color: #f5efe7;
+}
+
+#reproductor #nombre .titulo {
+  margin-left: 13px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#reproductor #nombre img {
+  width: 40px;
+}
+
+/* ? DURACIÓN */
+#reproductor #duracion {
+  display: flex;
+  margin: 0 15px;
+  margin-top: 20px;
+}
+
+#reproductor .tiempo {
+  color: #f5efe7;
+  font-size: 18px;
+}
+
+/* ? PROGRESO */
+#reproductor #linea {
+  display: flex;
+  align-items: center;
+  background-color: #f5efe7;
+  margin: auto;
+  height: 3px;
+  width: 73%;
+  border-radius: 30px;
+}
+
+#reproductor #linea .lineaInterna {
+  background-color: #c6a690;
+  height: 4px;
+  width: 40%;
+}
+
+#reproductor #linea .circulo {
+  background-color: #c6a690;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+#reproductor #navegacion {
+  display: flex;
+  margin: 25px 20px;
+  justify-content: space-between;
+}
+
+/* ? CONTROLES EXTRA */
+#reproductor #controles {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+#reproductor .line {
+  height: 4px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: rgba(243, 239, 231, 0.5);
+  border-radius: 30px;
+}
+
+#reproductor #swipeU {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
