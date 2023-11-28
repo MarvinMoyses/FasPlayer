@@ -10,7 +10,9 @@
             margin: 0;
             background: #213555;
             font-family: Arial, sans-serif;
+            padding-top: 90px;
         }
+
         header {
             background-color: #213555;
             color: #ffffff;
@@ -18,7 +20,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
         }
+
         footer {
             position: fixed;
             bottom: 0;
@@ -31,56 +38,79 @@
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
         }
-        .button {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #555;
-        }
+
         .selected {
             background-color: #555;
         }
+
         .list {
             background-color: #F5EFE7;
             border-top-left-radius: 33px;
             border-top-right-radius: 33px;
             height: 700px;
         }
+
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #737373;
         }
+
         .image {
             max-width: 100px;
             margin-right: 20px;
         }
+
         .text-container {
             flex: 1;
         }
-        h2 {
+
+        h3 {
             margin: 0;
         }
-        h3 {
+
+        h4 {
             margin-top: 10px;
             color: #545454;
         }
+
         .hr-container {
             padding-top: 4px;
             text-align: center;
             margin: 20px 0;
         }
+
         .hr-line {
             border: none;
             height: 5px;
             background-color: black;
             width: 40%;
+        }
+
+        /* *----- MENÚ ------- */
+        #menu {
+            background-color: #f5efe7;
+            border-radius: 1.875rem 1.875rem 0 0;
+            border-top: 0.0625rem solid #213555;
+            height: 4.375rem;
+            width: 95%;
+            display: flex;
+            position: fixed;
+            bottom: 0;
+        }
+
+        #menu .parte {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu .parte:first-child {
+            background-color: rgba(33, 53, 85, 0.3);
+            border-top-left-radius: 1.875rem;
         }
     </Style>
 </head>
@@ -88,7 +118,7 @@
     <div>
         <img src="imgs/figma/iconoApp.png" alt="" style="width: 80px; padding-left: 0px;">
     </div>
-    <div style="padding-left:10px ;color: white; font-size: 15px; font-family: Arial, sans-serif; ">
+    <div style="color: white; font-size: 15px; font-family: Arial, sans-serif; ">
         <h2>Play List</h2>
     </div>
     <div>
@@ -105,59 +135,68 @@
         <div class="hr-container">
             <hr class="hr-line">
         </div>
-        
+
         <div class="container">
             <div class="image">
-                <img src="imgs/figma/caratula II.png" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+                <img src="imgs/figma/caratula II.png" width="50"
+                    style="border-radius: 10px; border: 3px solid #000000;">
             </div>
             <div class="text-container">
-                <h2>Para Dormir</h2>
-                <h3>Playlist - Usuario</h3>
+                <h3>Para Dormir</h3>
+                <h4>Playlist - Usuario</h4>
             </div>
         </div>
         <div class="container">
             <div class="image">
-                <img src="imgs/figma/flor.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+                <img src="imgs/figma/flor.jpg" width="50" style="border-radius: 10px; border: 3px solid #000000;">
             </div>
             <div class="text-container">
-                <h2>Tus Me Gusta</h2>
-                <h3>Playlist - Usuario</h3>
+                <h3>Tus Me Gusta</h3>
+                <h4>Playlist - Usuario</h4>
             </div>
         </div>
         <div class="container">
             <div class="image">
-                <img src="imgs/figma/caratula IIII.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+                <img src="imgs/figma/caratula IIII.jpg" width="50"
+                    style="border-radius: 10px; border: 3px solid #000000;">
             </div>
             <div class="text-container">
-                <h2>Rap Good</h2>
-                <h3>Playlist - Usuario</h3>
+                <h3>Rap Good</h3>
+                <h4>Playlist - Usuario</h4>
             </div>
         </div>
         <div class="container">
             <div class="image">
-                <img src="imgs/figma/caratula V.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+                <img src="imgs/figma/caratula V.jpg" width="50" style="border-radius: 10px; border: 3px solid #000000;">
             </div>
             <div class="text-container">
-                <h2>Romanticonas</h2>
-                <h3>Playlist - Usuario</h3>
+                <h3>Romanticonas</h3>
+                <h4>Playlist - Usuario</h4>
             </div>
         </div>
         <div class="container">
             <div class="image">
-                <img src="imgs/figma/caratula VI.jpg" width="80" style="border-radius: 20px; border: 3px solid #000000;">
+                <img src="imgs/figma/caratula VI.jpg" width="50"
+                    style="border-radius: 10px; border: 3px solid #000000;">
             </div>
             <div class="text-container">
-                <h2>Pa Chambear</h2>
-                <h3>Playlist - Usuario</h3>
+                <h3>Pa Chambear</h3>
+                <h4>Playlist - Usuario</h4>
             </div>
         </div>
     </div>
 </body>
-<footer>
-    <a href="#" class="button"><img src="imgs/figma/music32.png" alt=""></a>
-    <a href="#" class="button"><img src="imgs/figma/jugar.png" alt="" width="40"></a>
-    <a href="#" class="button"><img src="imgs/figma/usuario (1).png" alt="" width="40"></a>
-   
+<footer id="menu">
+    <div class="parte">
+        <i class="fa-solid fa-music fa-2xl" style="color: #213555;"></i>
+    </div>
+    <div class="parte">
+        <i class="fa-solid fa-clapperboard fa-2xl" style="color: #213555;"></i>
+    </div>
+    <div class="parte">
+        <i class="fa-solid fa-user fa-2xl" style="color: #213555;"></i>
+    </div>
 </footer>
 
 </html>
+<script src="https://kit.fontawesome.com/9eef021a96.js" crossorigin="anonymous"></script>
