@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendacion</title>
+    <link rel="stylesheet" href="RecomendacionStyles.css">
+    <script src="https://kit.fontawesome.com/f43f57ddcb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="FastPlayerLogo" />
+        <h2>FastPlayer</h2>
+        <i class="fa-solid fa-circle-half-stroke fa-2xl" style="color: #ffffff;"></i>
+        <i class="fa-regular fa-bookmark fa-2xl" style="color: #ffffff; "></i>
+    </header>
+    <section class="section2">
+        <h2 class="Titulo">Playlist</h2>
+    </section>
+    <section class="PlayList">
+        <div class="Playlist1">
+            <img src="/images/caratula IIII.jpg" alt="">
+            <h3>Rap God</h3>
+        </div>
+        <div class="Playlist2">
+            <img src="/images/caratula II.png" alt="">
+            <h3>Para dormir</h3>
+        </div>
+    </section>
+    <section class="section2">
+        <h2 class="Titulo">Sugerencia para hoy</h2>
+    </section>
+    <div class="card-container">
+        <section class="card-sugerecia">
+            <div class="Playlist3">
+                <img src="/images/caratula IIII.jpg" alt="">
+                <h3>U Can’t touch this</h3>
+            </div>
+            <div class="Playlist4">
+                <img src="/images/caratula II.png" alt="">
+                <h3>U Can’t touch this</h3>
+            </div>
+            <div class="Playlist5">
+                <img src="/images/BO.jpeg" alt="">
+                <h3>finding god before finds</h3>
+            </div>
+    </div>
+    </section>
+    <section class="section2">
+        <h2 class="Titulo">Musica nueva para ti</h2>
+    </section>
+    <div class="card-container">
+        <section class="card-sugerecia">
+            <div class="Playlist3">
+                <img src="/images/caratula IIII.jpg" alt="">
+                <h3>U Can’t touch this</h3>
+            </div>
+            <div class="Playlist4">
+                <img src="/images/caratula II.png" alt="">
+                <h3>U Can’t touch this</h3>
+            </div>
+            <div class="Playlist5">
+                <img src="/images/BO.jpeg" alt="">
+                <h3>finding god before finds</h3>
+            </div>
+            </section>
+    </div>
+    <section class="section1">
+        <div id="scroll-bar"></div>
+        <div class="song-details">
+            <img src="/images/BO.jpeg" alt="">
+            <h3>Just pretend</h3>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-circle-plus fa-2xl" style="color: #023555;"></i>
+            <div id="play-pause-container">
+                <i id="play-pause-btn" class="fa-solid fa-play fa-2xl" style="color: #023555;"></i>
+                <audio id="audioPlayer" src="BAD OMENS - Just Pretend.mp3"></audio>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="selected">
+            <i class="fa-solid fa-music fa-2xl footer-selected" style="color: #213555;"></i>
+        </div>
+        <i class="fa-solid fa-clapperboard fa-2xl" style="color: #213555;"></i>
+        <i id="cuentaIcon" class="fa-solid fa-user fa-2xl" style="color: #213555;"></i>
+    </footer>
+</body>
+<script>
+    function handleScroll(event) {
+        const section = document.querySelector('.section1');
+        const scrollBar = document.getElementById('scroll-bar');
+
+        if (section.style.height === '90%') {
+            section.style.height = '22%';
+        } else {
+            section.style.height = '90%';
+        }
+        const scrollPercentage = (event.pageY / window.innerHeight) * 100;
+        const scrollAmount = (scrollPercentage / 100) * (section.scrollHeight - window.innerHeight);
+
+        section.scrollTo({
+            top: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+    const scrollBar = document.getElementById('scroll-bar');
+    scrollBar.addEventListener('click', handleScroll);
+
+    //controles
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+
+    playPauseBtn.addEventListener('click', function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseBtn.className = 'fa-solid fa-pause fa-2xl';
+        } else {
+            audioPlayer.pause();
+            playPauseBtn.className = 'fa-solid fa-play fa-2xl';
+        }
+    });
+    //footer
+    const musicIcon = document.getElementById('cuentaIcon');
+
+    musicIcon.addEventListener('click', function () {
+        window.location.href = 'Busqueda.html';
+    });
+</script>
+
+</html>

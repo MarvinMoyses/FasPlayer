@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda</title>
+    <link rel="stylesheet" href="Busqueda.css">
+    <script src="https://kit.fontawesome.com/f43f57ddcb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="FastPlayerLogo" />
+        <h2>FastPlayer</h2>
+        <i class="fa-solid fa-circle-half-stroke fa-2xl" style="color: #ffffff;"></i>
+        <i class="custom-icon"></i>
+    </header>
+    <div class="barra-busqueda">
+        <input type="text" placeholder="Buscar...">
+    </div>
+    <section class="categorias">
+        <div class="categoria">
+            <h3>Rock</h3>
+            <img src="/images/BO.jpeg" alt="">
+        </div>
+
+        <div class="categoria">
+            <h3>Salsa</h3>
+            <img src="/images/BO.jpeg" alt="">
+        </div>
+
+        <div class="categoria">
+            <h3>Cumbia</h3>
+            <img src="/images/BO.jpeg" alt="">
+        </div>
+
+        <div class="categoria">
+            <h3>Hip-Hop</h3>
+            <img src="/images/BO.jpeg" alt="">
+        </div>
+    </section>
+    <section class="section1">
+        <div id="scroll-bar"></div>
+        <div class="song-details">
+            <img src="/images/BO.jpeg" alt="">
+            <h3>Just pretend</h3>
+            <h4>Hola</h4>
+        </div>
+    </section>
+    <footer>
+        <i class="fa-solid fa-music fa-2xl footer-selected" style="color: #213555;"></i>
+        <i class="fa-solid fa-clapperboard fa-2xl" style="color: #213555;"></i>
+        <div class="selected">
+            <i id="cuentaIcon" class="fa-solid fa-user fa-2xl" style="color: #213555;"></i>
+        </div>
+    </footer>
+</body>
+<script>
+    function handleScroll(event) {
+        const section = document.querySelector('.section1');
+        const scrollBar = document.getElementById('scroll-bar');
+
+        if (section.style.height === '90%') {
+            section.style.height = '60%';
+        } else {
+            section.style.height = '90%';
+        }
+        const scrollPercentage = (event.pageY / window.innerHeight) * 100;
+        const scrollAmount = (scrollPercentage / 100) * (section.scrollHeight - window.innerHeight);
+
+        section.scrollTo({
+            top: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+    const scrollBar = document.getElementById('scroll-bar');
+    scrollBar.addEventListener('click', handleScroll);
+
+    //controles
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+
+    playPauseBtn.addEventListener('click', function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseBtn.className = 'fa-solid fa-pause fa-2xl';
+        } else {
+            audioPlayer.pause();
+            playPauseBtn.className = 'fa-solid fa-play fa-2xl';
+        }
+    });
+    //footer
+    const musicIcon = document.getElementById('cuentaIcon');
+
+    musicIcon.addEventListener('click', function () {
+        window.location.href = 'Busqueda.html';
+    });
+</script>
+</html>
