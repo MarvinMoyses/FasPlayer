@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #213555;
+}
+
+/* *----- HEADER -------*/
+header {
+    background-color: #213555;
+    color: #ffffff;
+    display: flex;
+    padding: 0.8125rem;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.625rem;
+    font-weight: bold;
+    position: fixed;
+}
+
+header::before {
+    border-radius: 1.875rem;
+}
+
+header #LogoTitulo {
+    display: flex;
+    align-items: center;
+}
+
+header #logo {
+    width: 2.8125rem;
+    margin-right: 0.8125rem;
+}
+
+header #xtraBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #darkM {
+    margin-right: 1.25rem;
+    width: 2.375rem;
+}
+
+header #favB {
+    width: 2.375rem;
+}
+
+/* *------ LISTA ----- */
+#lista {
+    background-color: #f5efe7;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border-radius: 1.875rem 1.875rem 0 0;
+    padding: 0.9375rem;
+    margin-top: 1.25rem;
+}
+
+#lista .cancion {
+    display: flex;
+    height: 4.375rem;
+    width: 100%;
+    padding-bottom: 0.625rem;
+    padding-top: 0.625rem;
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.15);
+}
+
+#lista .img {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 0.625rem;
+    border: 0.1875rem solid #213555;
+    margin-right: 0.625rem;
+}
+
+#lista .titulo {
+    font-size: 1.4375rem;
+    font-weight: bold;
+}
+
+#lista .duracion {
+    font-size: 1.125rem;
+}
+
+#lista .playB {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* *----- MENÚ ------- */
+#menu {
+    background-color: #f5efe7;
+    border-radius: 1.875rem 1.875rem 0 0;
+    border-top: 0.0625rem solid #213555;
+    height: 4.375rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+#menu .parte {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .parte:first-child {
+    background-color: rgba(33, 53, 85, 0.3);
+    border-top-left-radius: 1.875rem;
+}
+
+/* *------- LINEA ------- */
+#linea {
+    height: 0.375rem;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1.25rem;
+    background-color: #213555;
+}
+
+/* *---- REPRODUCTOR ---- */
+#reproductor {
+    padding-top: 4.5625rem;
+    align-items: center;
+}
+
+/* ? IMAGEN */
+#reproductor .img {
+    width: 17rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.625rem;
+}
+
+/* ? NOMBRE */
+#reproductor #nombre {
+    display: flex;
+    align-items: center;
+    margin: 0.9375rem 0.9375rem;
+    color: #f5efe7;
+}
+
+#reproductor #nombre .titulo {
+    margin-left: 0.8125rem;
+    font-size: 1.5625rem;
+    font-weight: bold;
+}
+
+#reproductor #nombre img {
+    width: 2.5rem;
+}
+
+/* ? DURACIÓN */
+#reproductor #duracion {
+    display: flex;
+    margin: 0 0.9375rem;
+    margin-top: 1.25rem;
+}
+
+#reproductor .tiempo {
+    color: #f5efe7;
+    font-size: 1.125rem;
+}
+
+/* ? PROGRESO */
+#reproductor #linea {
+    display: flex;
+    align-items: center;
+    background-color: #f5efe7;
+    margin: auto;
+    height: 0.1875rem;
+    width: 73%;
+    border-radius: 1.875rem;
+}
+
+#reproductor #linea .lineaInterna {
+    background-color: #c6a690;
+    height: 0.25rem;
+    width: 40%;
+}
+
+#reproductor #linea .circulo {
+    background-color: #c6a690;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    border-radius: 50%;
+}
+
+#reproductor #navegacion {
+    display: flex;
+    margin: 1.5625rem 1.25rem;
+    justify-content: space-between;
+}
+
+/* ? CONTROLES EXTRA */
+#reproductor #controles {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.25rem;
+}
+
+#reproductor .line {
+    height: 0.25rem;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1.25rem;
+    background-color: rgba(243, 239, 231, 0.5);
+    border-radius: 1.875rem;
+}
+
+#reproductor #swipeU {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
