@@ -15,6 +15,7 @@ body {
 
 /* *----- HEADER -------*/
 header {
+  margin-top: -1.1875rem;
   background-color: #213555;
   color: #ffffff;
   display: flex;
@@ -63,22 +64,21 @@ header #favB {
   overflow: auto;
   border-radius: 1.875rem 1.875rem 0 0;
   padding: 0.9375rem;
-  position: absolute;
+  margin-top: 1.25rem;
 }
 
 #lista .cancion {
   display: flex;
-  height: 4.375rem;
+  height: 6.25rem;
   width: 100%;
   padding-bottom: 0.625rem;
   padding-top: 0.625rem;
   border-bottom: 0.125rem solid rgba(0, 0, 0, 0.15);
 }
 
-#lista .img,
-#mini .img {
-  width: 3.125rem;
-  height: 3.125rem;
+#lista .img {
+  width: 7.8125rem;
+  height: 4.875rem;
   border-radius: 0.625rem;
   border: 0.1875rem solid #213555;
   margin-right: 0.625rem;
@@ -93,8 +93,7 @@ header #favB {
   font-size: 1.125rem;
 }
 
-#lista .playB,
-#mini .pause {
+#lista .playB {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -119,9 +118,8 @@ header #favB {
   align-items: center;
 }
 
-#menu .parte:first-child {
+#menu .parte:nth-child(2) {
   background-color: rgba(33, 53, 85, 0.3);
-  border-top-left-radius: 1.875rem;
 }
 
 /* *------- LINEA ------- */
@@ -146,7 +144,10 @@ header #favB {
 }
 
 #mini .img {
-  border-color: #f5efe7;
+  border: solid 0.1875rem #f5efe7;
+  border-radius: 0.625rem;
+  width: 7.8125rem;
+  height: 4.875rem;
 }
 
 #mini .info {
@@ -155,6 +156,10 @@ header #favB {
   color: #f5efe7;
   font-size: 1.5625rem;
   font-weight: bold;
+}
+
+#mini .info .titulo {
+  margin-left: 0.3125rem;
 }
 
 #mini #pause {
@@ -166,5 +171,5 @@ header #favB {
 #mini #swipeU {
   display: flex;
   justify-content: center;
-  margin-bottom: 0.9375rem;
+  margin-bottom: -0.4375rem;
 }

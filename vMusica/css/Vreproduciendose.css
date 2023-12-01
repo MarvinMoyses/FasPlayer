@@ -63,22 +63,21 @@ header #favB {
   overflow: auto;
   border-radius: 1.875rem 1.875rem 0 0;
   padding: 0.9375rem;
-  position: absolute;
+  margin-top: 1.25rem;
 }
 
 #lista .cancion {
   display: flex;
-  height: 4.375rem;
+  height: 6.25rem;
   width: 100%;
   padding-bottom: 0.625rem;
   padding-top: 0.625rem;
   border-bottom: 0.125rem solid rgba(0, 0, 0, 0.15);
 }
 
-#lista .img,
-#mini .img {
-  width: 3.125rem;
-  height: 3.125rem;
+#lista .img {
+  width: 7.8125rem;
+  height: 4.875rem;
   border-radius: 0.625rem;
   border: 0.1875rem solid #213555;
   margin-right: 0.625rem;
@@ -93,8 +92,7 @@ header #favB {
   font-size: 1.125rem;
 }
 
-#lista .playB,
-#mini .pause {
+#lista .playB {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -119,9 +117,8 @@ header #favB {
   align-items: center;
 }
 
-#menu .parte:first-child {
+#menu .parte:nth-child(2) {
   background-color: rgba(33, 53, 85, 0.3);
-  border-top-left-radius: 1.875rem;
 }
 
 /* *------- LINEA ------- */
@@ -133,38 +130,105 @@ header #favB {
   background-color: #213555;
 }
 
-/* *----- MINIMIZADO ---- */
-#mini {
+/* *---- REPRODUCTOR ---- */
+#reproductor {
   padding-top: 4.5625rem;
-}
-
-#mini .cancion {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 0.9375rem;
 }
 
-#mini .img {
-  border-color: #f5efe7;
+/* ? IMAGEN */
+#reproductor .img {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  border-radius: 0.625rem;
 }
 
-#mini .info {
+/* ? NOMBRE */
+#reproductor #nombre {
   display: flex;
   align-items: center;
+  margin: 0.9375rem 0.9375rem;
+  margin-top: 2.625rem;
   color: #f5efe7;
+}
+
+#reproductor #nombre .titulo {
+  margin-left: 0.8125rem;
   font-size: 1.5625rem;
   font-weight: bold;
 }
 
-#mini #pause {
-  display: flex;
-  width: 2.1875rem;
-  height: 2.1875rem;
+#reproductor #nombre img {
+  width: 2.5rem;
 }
 
-#mini #swipeU {
+/* ? DURACIÓN */
+#reproductor #duracion {
+  display: flex;
+  margin: 0 0.9375rem;
+  margin-top: -1.6875rem;
+}
+
+#reproductor .tiempo {
+  color: #f5efe7;
+  font-size: 1.125rem;
+}
+
+/* ? PROGRESO */
+#reproductor #linea {
+  display: flex;
+  align-items: center;
+  background-color: #f5efe7;
+  margin: auto;
+  height: 0.1875rem;
+  width: 73%;
+  border-radius: 1.875rem;
+}
+
+#reproductor #linea .lineaInterna {
+  background-color: #c6a690;
+  height: 0.25rem;
+  width: 40%;
+}
+
+#reproductor #linea .circulo {
+  background-color: #c6a690;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+}
+
+#reproductor #navegacion {
+  display: flex;
+  margin: 1.5625rem 1.25rem;
+  justify-content: space-between;
+  margin-top: -3.5rem;
+  width: 37%;
+}
+
+#reproductor #navegacion img {
+  width: 1.25rem;
+}
+
+/* ? CONTROLES EXTRA */
+#reproductor #controles {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.25rem;
+}
+
+#reproductor .line {
+  height: 0.25rem;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1.25rem;
+  background-color: rgba(243, 239, 231, 0.5);
+  border-radius: 1.875rem;
+}
+
+#reproductor #swipeU {
   display: flex;
   justify-content: center;
-  margin-bottom: 0.9375rem;
+  margin: 1.25rem 0;
 }
