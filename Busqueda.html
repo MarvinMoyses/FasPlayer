@@ -30,11 +30,10 @@
         footer {
             position: fixed;
             bottom: 0;
-            width: 95%;
+            width: 100%;
             background-color: #F5EFE7;
             display: flex;
             justify-content: space-around;
-            padding: 10px;
             border: 1px solid #000000;
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
@@ -109,7 +108,7 @@
             border-radius: 1.875rem 1.875rem 0 0;
             border-top: 0.0625rem solid #213555;
             height: 4.375rem;
-            width: 95%;
+            width: 100%;
             display: flex;
             position: fixed;
             bottom: 0;
@@ -122,9 +121,9 @@
             align-items: center;
         }
 
-        #menu .parte:first-child {
+        #menu .parte:last-child {
             background-color: rgba(33, 53, 85, 0.3);
-            border-top-left-radius: 1.875rem;
+            border-top-right-radius: 1.875rem;
         }
     </Style>
 </head>
@@ -244,19 +243,24 @@
                 <h4>Playlist - Usuario</h4>
             </div>
         </div>
+
     </div>
+    <footer id="menu">
+        <div class="parte" onclick="window.location.href='/Reproduciendose.html'">
+            <i class="fa-solid fa-music fa-2xl" style="color: #213555;"></i>
+        </div>
+        <div class="parte" onclick="window.location.href='/VideoPrincipal.html'">
+            <i class="fa-solid fa-clapperboard fa-2xl" style="color: #213555;"></i>
+        </div>
+        <div class="parte" onclick="window.location.href='/Recomendacion.html'">
+            <i class="fa-solid fa-headphones-simple fa-2xl" style="color: #213555;"></i>
+        </div>
+        <div class="parte">
+            <i class="fa-solid fa-user fa-2xl" style="color: #213555;"></i>
+        </div>
+    </footer>
 </body>
-<footer id="menu">
-    <div class="parte">
-        <i class="fa-solid fa-music fa-2xl" style="color: #213555;"></i>
-    </div>
-    <div class="parte">
-        <i class="fa-solid fa-clapperboard fa-2xl" style="color: #213555;"></i>
-    </div>
-    <div class="parte">
-        <i class="fa-solid fa-user fa-2xl" style="color: #213555;"></i>
-    </div>
-</footer>
+
 
 </html>
 <script src="https://kit.fontawesome.com/9eef021a96.js" crossorigin="anonymous"></script>

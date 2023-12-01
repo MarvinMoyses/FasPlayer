@@ -43,7 +43,7 @@ header i:last-child {
 
 /*section*/
 .section1 {
-    background-color: #ffffff;
+    background-color: #f5efe7;
     padding: 20px;
     box-sizing: border-box;
     position: fixed;
@@ -254,7 +254,7 @@ header i:last-child {
 
 /*footer*/
 footer {
-    background-color: #ffffff;
+    background-color: #f5efe7;
     padding: 20px;
     box-sizing: border-box;
     position: fixed;
@@ -264,7 +264,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 8%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-top: 3px solid #c6c6c6;
@@ -283,10 +283,11 @@ footer i {
     content: '';
     position: absolute;
     top: -180%;
-    left: -38%;
+    margin-top: 8px;
+    left: -45%;
     right: -50%;
-    width: 121px;
-    height: 90px;
+    width: 100px;
+    height: 80px;
     flex-shrink: 0;
     background-color: #213555;
     border-top-left-radius: inherit;
@@ -294,4 +295,5 @@ footer i {
     z-index: -1;
     opacity: 0.3;
     border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
